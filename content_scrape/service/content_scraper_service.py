@@ -3,8 +3,8 @@ from pip._vendor import requests
 
 from content_scrape.model.content import Content
 
-
 class ContentScraperService:
+
     BLACKLIST = [
         '[document]',
         'noscript',
@@ -16,7 +16,8 @@ class ContentScraperService:
         'script',
         'style',
         'footer',
-        'aside'
+        'aside',
+        'title'
     ]
 
     def scrape_page(self, url):
