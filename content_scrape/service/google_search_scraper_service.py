@@ -1,5 +1,8 @@
 import re
 
+from bs4 import BeautifulSoup
+from pip._vendor import requests
+
 from content_scrape.service.content_scraper_service import ContentScraperService
 
 
@@ -12,11 +15,16 @@ class GoogleSearchScraperService:
         r'(?::\d+)?'  # optional port
         r'(?:/?|[/?]\S+)$', re.IGNORECASE)
 
+    def scrape_page(self, url):
+        page = requests.get(url)
+        page_content = page.content
+        return BeautifulSoup(page_content, 'html.parser')
+
     def construct_url(self, query):
         return "https://www.google.com/search?q=" + query.replace(" ", "+")
 
     def get_search_result(self, query):
-        soup = ContentScraperService.scrape_page(self.construct_url(query))
+        soup = self.scrape_page(self.construct_url(query))
 
         links = []
 

@@ -17,5 +17,5 @@ class TestContentScraperService(TestCase):
         content_scraper_service = ContentScraperService()
         content = content_scraper_service.get_page_content("mocked_url")
 
-        self.assertEqual(content.title, "HTML Reference", "Scraped page title!")
+        self.assertEqual(content.title, "HTML Title", "Scraped page title!")
         self.assertEqual(content.text_content, "The content of the document...... ", "Scraped page content")
