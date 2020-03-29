@@ -20,7 +20,8 @@ class ContentScraperService:
         'title'
     ]
 
-    def scrape_page(self, url):
+    @staticmethod
+    def scrape_page(url):
         page = requests.get(url)
         page_content = page.content
         return BeautifulSoup(page_content, 'html.parser')
