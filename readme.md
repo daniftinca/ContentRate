@@ -11,3 +11,5 @@ For dependencies use pip. If you install a new library make sure to run:
 To install/update all dependencies run: 
 
 `pip install -r requirements.txt`
+
+When working, please create a new branch/ use existing branch for the feature you are working on. Once you consider the feature to be complete, make a pull request on the parent branch. 
