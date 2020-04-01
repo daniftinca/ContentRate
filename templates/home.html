@@ -1,0 +1,15 @@
+{#{% extends "base_generic.html" %}#}
+
+{% block content %}
+
+
+  <form method="post" action="{% url 'content_analyzer:analyze_content' %}">
+    {% csrf_token %}
+   {{form.url_input}}
+
+    <input type="submit" value="Analyze" />
+    <input type="hidden" name="next" value="{{ next }}" />
+  </form>
+
+
+{% endblock %}

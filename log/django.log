@@ -41,3 +41,42 @@ django.template.exceptions.TemplateDoesNotExist: registration/registration.html
 2020-04-01 10:53:52,030 django.server INFO     "GET /accounts/register/ HTTP/1.1" 200 2485
 2020-04-01 11:17:35,411 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 751
 2020-04-01 11:17:41,787 django.server INFO     "POST /accounts/login/ HTTP/1.1" 200 840
+2020-04-01 11:26:18,718 django.utils.autoreload INFO     C:\Users\Dan\PycharmProjects\content_rate\content_rate\settings.py changed, reloading.
+2020-04-01 12:03:58,423 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 12:14:15,907 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 12:14:17,231 django.request WARNING  Not Found: /
+2020-04-01 12:14:17,232 django.server WARNING  "GET / HTTP/1.1" 404 2261
+2020-04-01 12:16:19,163 django.utils.autoreload INFO     C:\Users\Dan\PycharmProjects\content_rate\content_rate\urls.py changed, reloading.
+2020-04-01 12:16:20,286 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 12:16:45,347 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 12:17:01,558 django.utils.autoreload INFO     C:\Users\Dan\PycharmProjects\content_rate\content_analyzer\urls.py changed, reloading.
+2020-04-01 12:17:02,590 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 12:17:36,225 django.utils.autoreload INFO     C:\Users\Dan\PycharmProjects\content_rate\content_analyzer\urls.py changed, reloading.
+2020-04-01 12:17:37,270 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 12:18:06,866 django.utils.autoreload INFO     C:\Users\Dan\PycharmProjects\content_rate\content_analyzer\urls.py changed, reloading.
+2020-04-01 12:18:07,921 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 12:18:10,939 django.server INFO     "GET / HTTP/1.1" 200 310
+2020-04-01 12:18:28,681 django.utils.autoreload INFO     C:\Users\Dan\PycharmProjects\content_rate\content_analyzer\views.py changed, reloading.
+2020-04-01 12:18:29,772 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 12:19:15,878 django.utils.autoreload INFO     C:\Users\Dan\PycharmProjects\content_rate\content_analyzer\views.py changed, reloading.
+2020-04-01 12:19:17,008 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 12:19:57,429 django.utils.autoreload INFO     C:\Users\Dan\PycharmProjects\content_rate\content_analyzer\views.py changed, reloading.
+2020-04-01 12:19:58,467 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 12:20:01,481 django.utils.autoreload INFO     C:\Users\Dan\PycharmProjects\content_rate\content_analyzer\views.py changed, reloading.
+2020-04-01 12:20:02,610 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 12:20:12,236 django.utils.autoreload INFO     C:\Users\Dan\PycharmProjects\content_rate\content_analyzer\views.py changed, reloading.
+2020-04-01 12:20:13,225 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 12:20:15,110 django.server INFO     "GET / HTTP/1.1" 200 310
+2020-04-01 12:20:25,857 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 12:20:28,084 django.server INFO     "GET / HTTP/1.1" 200 310
+2020-04-01 12:23:17,497 django.server INFO     "GET /accounts/logout HTTP/1.1" 301 0
+2020-04-01 12:23:17,562 django.server INFO     "GET /accounts/logout/ HTTP/1.1" 200 84
+2020-04-01 12:23:22,289 django.server INFO     "GET / HTTP/1.1" 302 0
+2020-04-01 12:23:22,312 django.server INFO     "GET /accounts/login/?next=/ HTTP/1.1" 200 809
+2020-04-01 12:27:57,122 django.server INFO     "POST /accounts/login/ HTTP/1.1" 302 0
+2020-04-01 12:27:57,183 django.server INFO     "GET / HTTP/1.1" 200 374
+2020-04-01 12:28:23,453 django.server INFO     "POST /accounts/login/ HTTP/1.1" 200 824
+2020-04-01 12:28:37,453 django.server INFO     "POST /accounts/login/ HTTP/1.1" 302 0
+2020-04-01 12:28:37,528 django.server INFO     "GET / HTTP/1.1" 200 374
+2020-04-01 12:31:34,129 django.server INFO     "GET / HTTP/1.1" 200 359
+2020-04-01 12:31:36,965 django.server INFO     "POST / HTTP/1.1" 200 414
