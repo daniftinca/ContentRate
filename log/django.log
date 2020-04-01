@@ -1,0 +1,43 @@
+2020-04-01 10:21:07,337 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 10:21:13,235 django.request WARNING  Not Found: /
+2020-04-01 10:21:13,236 django.server WARNING  "GET / HTTP/1.1" 404 2143
+2020-04-01 10:21:21,718 django.request WARNING  Not Found: /accounts/register
+2020-04-01 10:21:21,718 django.server WARNING  "GET /accounts/register HTTP/1.1" 404 3678
+2020-04-01 10:27:45,692 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 10:28:28,676 django.request WARNING  Not Found: /
+2020-04-01 10:28:28,677 django.server WARNING  "GET / HTTP/1.1" 404 2252
+2020-04-01 10:28:32,246 django.server INFO     "GET /register HTTP/1.1" 301 0
+2020-04-01 10:28:32,345 django.request ERROR    Internal Server Error: /register/
+Traceback (most recent call last):
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Dan\PycharmProjects\content_rate\registration\views.py", line 54, in user_register
+    return render(request, template, {'form': form})
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: registration/registration.html
+2020-04-01 10:28:32,348 django.server ERROR    "GET /register/ HTTP/1.1" 500 88135
+2020-04-01 10:33:15,369 django.server INFO     "GET /register/ HTTP/1.1" 200 2476
+2020-04-01 10:34:58,961 django.server INFO     "POST /register/ HTTP/1.1" 302 0
+2020-04-01 10:34:58,978 django.server INFO     "GET /accounts/login HTTP/1.1" 301 0
+2020-04-01 10:34:59,009 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 814
+2020-04-01 10:35:04,440 django.server INFO     "POST /accounts/login/ HTTP/1.1" 302 0
+2020-04-01 10:35:04,465 django.request WARNING  Not Found: /
+2020-04-01 10:35:04,466 django.server WARNING  "GET / HTTP/1.1" 404 2252
+2020-04-01 10:35:12,624 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 814
+2020-04-01 10:53:37,289 django.utils.autoreload INFO     C:\Users\Dan\PycharmProjects\content_rate\content_rate\urls.py changed, reloading.
+2020-04-01 10:53:40,350 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 10:53:42,430 django.request WARNING  Not Found: /
+2020-04-01 10:53:42,431 django.server WARNING  "GET / HTTP/1.1" 404 2261
+2020-04-01 10:53:51,986 django.server INFO     "GET /accounts/register HTTP/1.1" 301 0
+2020-04-01 10:53:52,030 django.server INFO     "GET /accounts/register/ HTTP/1.1" 200 2485
+2020-04-01 11:17:35,411 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 751
+2020-04-01 11:17:41,787 django.server INFO     "POST /accounts/login/ HTTP/1.1" 200 840
