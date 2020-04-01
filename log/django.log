@@ -127,3 +127,39 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'register/' not found. 'regis
 2020-04-01 09:27:43,296 django.server INFO     "POST /accounts/login/ HTTP/1.1" 302 0
 2020-04-01 09:27:43,302 django.request WARNING  Not Found: /
 2020-04-01 09:27:43,303 django.server WARNING  "GET / HTTP/1.1" 404 2252
+2020-04-01 09:34:06,779 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 09:34:13,872 django.request WARNING  Not Found: /
+2020-04-01 09:34:13,872 django.server WARNING  "GET / HTTP/1.1" 404 2252
+2020-04-01 09:34:17,358 django.request WARNING  Not Found: /
+2020-04-01 09:34:17,358 django.server WARNING  "GET / HTTP/1.1" 404 2252
+2020-04-01 09:34:18,984 django.server INFO     "GET /register/ HTTP/1.1" 200 3770
+2020-04-01 09:34:19,846 django.server INFO     "GET /register/ HTTP/1.1" 200 3770
+2020-04-01 09:36:16,771 django.utils.autoreload INFO     /Users/alinpop/PycharmProjects/ContentRate/registration/forms.py changed, reloading.
+2020-04-01 09:36:17,193 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 09:36:21,750 django.server INFO     "GET /register/ HTTP/1.1" 200 3793
+2020-04-01 09:36:55,427 django.utils.autoreload INFO     /Users/alinpop/PycharmProjects/ContentRate/registration/forms.py changed, reloading.
+2020-04-01 09:36:55,852 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 09:36:59,687 django.server INFO     "GET /register/ HTTP/1.1" 200 3867
+2020-04-01 09:37:47,965 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3407
+2020-04-01 09:37:49,772 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3407
+2020-04-01 09:39:42,604 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3407
+2020-04-01 09:39:44,886 django.server INFO     "GET /register/ HTTP/1.1" 200 3867
+2020-04-01 09:39:46,849 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3407
+2020-04-01 09:39:48,383 django.server INFO     "GET /register/ HTTP/1.1" 200 3867
+2020-04-01 09:39:49,603 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3407
+2020-04-01 09:43:11,120 django.server INFO     "GET /register/ HTTP/1.1" 200 3866
+2020-04-01 09:43:23,584 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3406
+2020-04-01 09:43:25,853 django.server INFO     "GET /register/ HTTP/1.1" 200 3866
+2020-04-01 09:43:27,099 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3406
+2020-04-01 09:43:28,319 django.server INFO     "GET /register/ HTTP/1.1" 200 3866
+2020-04-01 09:43:39,912 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3406
+2020-04-01 09:47:29,917 django.utils.autoreload INFO     /Users/alinpop/PycharmProjects/ContentRate/registration/views.py changed, reloading.
+2020-04-01 09:47:30,492 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 09:48:05,606 django.utils.autoreload INFO     /Users/alinpop/PycharmProjects/ContentRate/registration/views.py changed, reloading.
+2020-04-01 09:48:06,043 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 09:48:10,532 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3406
+2020-04-01 09:48:11,263 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3406
+2020-04-01 09:48:11,680 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3406
+2020-04-01 09:48:19,259 django.utils.autoreload INFO     /Users/alinpop/PycharmProjects/ContentRate/registration/views.py changed, reloading.
+2020-04-01 09:48:19,637 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 09:48:23,267 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3406

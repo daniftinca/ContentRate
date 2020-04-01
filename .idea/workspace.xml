@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c23d6263-8cb2-4266-bbbd-450656faf411" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/log/django.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/django.log" beforeDir="false" afterPath="$PROJECT_DIR$/log/django.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registration/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/registration/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/registration/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/registration.html" afterDir="false" />
     </list>
@@ -102,7 +104,7 @@
       <workItem from="1585721906655" duration="2100000" />
       <workItem from="1585724117376" duration="2485000" />
       <workItem from="1585727089767" duration="1238000" />
-      <workItem from="1585730609767" duration="2108000" />
+      <workItem from="1585730609767" duration="3323000" />
     </task>
     <servers />
   </component>
