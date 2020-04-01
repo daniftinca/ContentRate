@@ -97,7 +97,8 @@
 					<h3 id="form-title">LOGIN</h3>
 				</div>
 				<div class="d-flex justify-content-center form_container">
-					<form method="post" action="{% url 'login' %}">
+					<form method="post" action="{% url 'registration:custom_login' %}">
+
 						{% csrf_token %}
 						<div class="input-group mb-3">
 							<div class="input-group-append">
@@ -135,5 +136,6 @@
 	</div>
   {# Assumes you setup the password_reset view in your URLconf #}
 {#  <p><a href="{% url 'password_reset' %}">Lost password?</a></p>#}
+      <p><a href="{% url 'registration:custom_registration' %}">No account yet?</a></p>
 
 {% endblock %}

@@ -5,6 +5,20 @@ from django.http import HttpResponseRedirect
 from .forms import RegisterForm
 
 
+def custom_login(request):
+    if request.user.is_authenticated:
+        return HttpResponseRedirect('/')
+    else:
+        return login(request)
+
+
+def custom_registration(request):
+    if request.user.is_authenticated:
+        return HttpResponseRedirect('/')
+    else:
+        return user_register(request)
+
+
 def user_register(request):
     # if this is a POST request we need to process the form data
     template = 'registration/registration.html'
