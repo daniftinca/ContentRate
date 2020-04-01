@@ -17,14 +17,15 @@ class AnalyzerService:
         self.google_scrape_service = GoogleSearchScraperService()
 
     def compare_len(self):
-        request_page_content = self.scraping_service.get_page_content(self.url)
+        request_page_content = self.scraping_service.get_page_content(self.url).text_content
         google_content = self.google_scrape_service.get_search_result_with_content(self.target_query)
 
         sum = 0
         for content in google_content:
+            content = content.text_content
             sum += len(content.split(" "))
 
-        target_length = sum/len(content)
+        target_length = sum/len(google_content)
         request_length = len(request_page_content.split(" "))
 
         return request_length,target_length

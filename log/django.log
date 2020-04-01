@@ -80,3 +80,106 @@ django.template.exceptions.TemplateDoesNotExist: registration/registration.html
 2020-04-01 12:28:37,528 django.server INFO     "GET / HTTP/1.1" 200 374
 2020-04-01 12:31:34,129 django.server INFO     "GET / HTTP/1.1" 200 359
 2020-04-01 12:31:36,965 django.server INFO     "POST / HTTP/1.1" 200 414
+2020-04-01 12:37:22,189 django.utils.autoreload INFO     C:\Users\Dan\PycharmProjects\content_rate\content_analyzer\views.py changed, reloading.
+2020-04-01 12:37:23,252 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 12:39:30,374 django.utils.autoreload INFO     C:\Users\Dan\PycharmProjects\content_rate\content_analyzer\views.py changed, reloading.
+2020-04-01 12:39:31,592 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 12:40:21,337 django.utils.autoreload INFO     C:\Users\Dan\PycharmProjects\content_rate\content_analyzer\views.py changed, reloading.
+2020-04-01 12:40:22,557 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 12:40:27,454 django.server INFO     "GET / HTTP/1.1" 200 501
+2020-04-01 12:40:35,581 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Dan\PycharmProjects\content_rate\content_analyzer\views.py", line 15, in analyze_content
+    service = AnalyzerService(form.url_input,form.target_query)
+AttributeError: 'AnalyzeForm' object has no attribute 'url_input'
+2020-04-01 12:40:35,584 django.server ERROR    "POST / HTTP/1.1" 500 81039
+2020-04-01 12:41:13,794 django.utils.autoreload INFO     C:\Users\Dan\PycharmProjects\content_rate\content_analyzer\views.py changed, reloading.
+2020-04-01 12:41:15,039 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 12:41:19,376 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Dan\PycharmProjects\content_rate\content_analyzer\views.py", line 15, in analyze_content
+    url = form.url_input
+AttributeError: 'AnalyzeForm' object has no attribute 'url_input'
+2020-04-01 12:41:19,378 django.server ERROR    "POST / HTTP/1.1" 500 81076
+2020-04-01 12:42:31,184 django.utils.autoreload INFO     C:\Users\Dan\PycharmProjects\content_rate\content_analyzer\views.py changed, reloading.
+2020-04-01 12:42:32,423 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 12:42:38,310 django.server INFO     "GET /accounts/logout/ HTTP/1.1" 200 84
+2020-04-01 12:42:40,385 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 751
+2020-04-01 12:42:41,129 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 751
+2020-04-01 12:42:42,798 django.server INFO     "POST /accounts/login/ HTTP/1.1" 302 0
+2020-04-01 12:42:42,882 django.server INFO     "GET / HTTP/1.1" 200 501
+2020-04-01 12:42:46,038 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Dan\PycharmProjects\content_rate\content_analyzer\views.py", line 15, in analyze_content
+    url = form.cleaned_data['url_input']
+AttributeError: 'AnalyzeForm' object has no attribute 'cleaned_data'
+2020-04-01 12:42:46,042 django.server ERROR    "POST / HTTP/1.1" 500 81164
+2020-04-01 12:44:37,010 django.utils.autoreload INFO     C:\Users\Dan\PycharmProjects\content_rate\content_analyzer\views.py changed, reloading.
+2020-04-01 12:44:38,240 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 12:45:07,374 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Dan\PycharmProjects\content_rate\content_analyzer\views.py", line 23, in analyze_content
+    first_res = service.compare_len()
+  File "C:\Users\Dan\PycharmProjects\content_rate\content_analyzer\service\analyzer_service.py", line 25, in compare_len
+    sum += len(content.split(" "))
+AttributeError: 'Content' object has no attribute 'split'
+2020-04-01 12:45:07,377 django.server ERROR    "POST / HTTP/1.1" 500 86656
+2020-04-01 12:45:18,115 django.utils.autoreload INFO     C:\Users\Dan\PycharmProjects\content_rate\content_analyzer\service\analyzer_service.py changed, reloading.
+2020-04-01 12:45:25,470 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 12:45:33,018 django.server INFO     "GET / HTTP/1.1" 200 501
+2020-04-01 12:45:47,633 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 12:46:03,389 django.server INFO     "GET / HTTP/1.1" 200 501
+2020-04-01 12:46:22,695 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\Dan\PycharmProjects\content_rate\content_analyzer\views.py", line 23, in analyze_content
+    first_res = service.compare_len()
+  File "C:\Users\Dan\PycharmProjects\content_rate\content_analyzer\service\analyzer_service.py", line 25, in compare_len
+    sum += len(content.split(" "))
+AttributeError: 'Content' object has no attribute 'split'
+2020-04-01 12:46:22,697 django.server ERROR    "POST / HTTP/1.1" 500 90282
+2020-04-01 12:46:22,699 django.server ERROR    "POST / HTTP/1.1" 500 59
+2020-04-01 12:47:56,013 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 12:48:04,950 django.utils.autoreload INFO     C:\Users\Dan\PycharmProjects\content_rate\content_analyzer\service\analyzer_service.py changed, reloading.
+2020-04-01 12:48:06,153 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 12:48:10,475 django.server INFO     "GET / HTTP/1.1" 200 501
+2020-04-01 12:48:57,586 django.server INFO     "POST / HTTP/1.1" 200 573
