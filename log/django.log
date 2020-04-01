@@ -1,165 +1,43 @@
-2020-04-01 08:49:12,585 django.utils.autoreload INFO     Watching for file changes with StatReloader
-2020-04-01 08:49:25,498 django.request WARNING  Not Found: /
-2020-04-01 08:49:25,498 django.server WARNING  "GET / HTTP/1.1" 404 2252
-2020-04-01 08:49:29,267 django.request WARNING  Not Found: /
-2020-04-01 08:49:29,267 django.server WARNING  "GET / HTTP/1.1" 404 2252
-2020-04-01 08:49:29,568 django.request WARNING  Not Found: /login/
-2020-04-01 08:49:29,568 django.server WARNING  "GET /login/ HTTP/1.1" 404 2288
-2020-04-01 08:49:30,157 django.request WARNING  Not Found: /login/
-2020-04-01 08:49:30,157 django.server WARNING  "GET /login/ HTTP/1.1" 404 2288
-2020-04-01 08:50:04,893 django.request WARNING  Not Found: /
-2020-04-01 08:50:04,894 django.server WARNING  "GET / HTTP/1.1" 404 2252
-2020-04-01 08:50:09,495 django.request WARNING  Not Found: /
-2020-04-01 08:50:09,495 django.server WARNING  "GET / HTTP/1.1" 404 2252
-2020-04-01 08:50:10,007 django.server INFO     "GET /register/ HTTP/1.1" 200 2476
-2020-04-01 08:50:11,698 django.server INFO     "GET /register/ HTTP/1.1" 200 2476
-2020-04-01 08:50:31,084 django.server INFO     "GET /register/ HTTP/1.1" 200 2476
-2020-04-01 08:50:32,579 django.request WARNING  Not Found: /
-2020-04-01 08:50:32,580 django.server WARNING  "GET / HTTP/1.1" 404 2252
-2020-04-01 08:50:32,876 django.request WARNING  Not Found: /login/
-2020-04-01 08:50:32,876 django.server WARNING  "GET /login/ HTTP/1.1" 404 2288
-2020-04-01 08:50:34,191 django.request WARNING  Not Found: /login/
-2020-04-01 08:50:34,191 django.server WARNING  "GET /login/ HTTP/1.1" 404 2288
-2020-04-01 08:51:47,915 django.request WARNING  Not Found: /login/
-2020-04-01 08:51:47,915 django.server WARNING  "GET /login/ HTTP/1.1" 404 2288
-2020-04-01 08:51:48,660 django.request WARNING  Not Found: /
-2020-04-01 08:51:48,660 django.server WARNING  "GET / HTTP/1.1" 404 2252
-2020-04-01 08:51:51,391 django.server INFO     "GET /accounts/login HTTP/1.1" 301 0
-2020-04-01 08:51:51,402 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 814
-2020-04-01 08:51:51,519 django.request WARNING  Not Found: /favicon.ico
-2020-04-01 08:51:51,519 django.server WARNING  "GET /favicon.ico HTTP/1.1" 404 2303
-2020-04-01 09:01:06,474 django.request ERROR    Internal Server Error: /accounts/login/
+2020-04-01 10:21:07,337 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 10:21:13,235 django.request WARNING  Not Found: /
+2020-04-01 10:21:13,236 django.server WARNING  "GET / HTTP/1.1" 404 2143
+2020-04-01 10:21:21,718 django.request WARNING  Not Found: /accounts/register
+2020-04-01 10:21:21,718 django.server WARNING  "GET /accounts/register HTTP/1.1" 404 3678
+2020-04-01 10:27:45,692 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 10:28:28,676 django.request WARNING  Not Found: /
+2020-04-01 10:28:28,677 django.server WARNING  "GET / HTTP/1.1" 404 2252
+2020-04-01 10:28:32,246 django.server INFO     "GET /register HTTP/1.1" 301 0
+2020-04-01 10:28:32,345 django.request ERROR    Internal Server Error: /register/
 Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
     response = get_response(request)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/core/handlers/base.py", line 145, in _get_response
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\core\handlers\base.py", line 115, in _get_response
     response = self.process_exception_by_middleware(e, request)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/core/handlers/base.py", line 143, in _get_response
-    response = response.render()
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/response.py", line 105, in render
-    self.content = self.rendered_content
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/response.py", line 83, in rendered_content
-    return template.render(context, self._request)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
-    return self.template.render(context)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 171, in render
-    return self._render(context)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
-    return self.nodelist.render(context)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 936, in render
-    bit = node.render_annotated(context)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
-    return self.render(context)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/loader_tags.py", line 53, in render
-    result = self.nodelist.render(context)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 936, in render
-    bit = node.render_annotated(context)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
-    return self.render(context)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/defaulttags.py", line 443, in render
-    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/urls/base.py", line 87, in reverse
-    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
-    raise NoReverseMatch(msg)
-django.urls.exceptions.NoReverseMatch: Reverse for 'register' not found. 'register' is not a valid view function or pattern name.
-2020-04-01 09:01:06,477 django.server ERROR    "GET /accounts/login/ HTTP/1.1" 500 142367
-2020-04-01 09:01:34,427 django.request ERROR    Internal Server Error: /accounts/login/
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/core/handlers/exception.py", line 34, in inner
-    response = get_response(request)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/core/handlers/base.py", line 145, in _get_response
-    response = self.process_exception_by_middleware(e, request)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/core/handlers/base.py", line 143, in _get_response
-    response = response.render()
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/response.py", line 105, in render
-    self.content = self.rendered_content
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/response.py", line 83, in rendered_content
-    return template.render(context, self._request)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/backends/django.py", line 61, in render
-    return self.template.render(context)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 171, in render
-    return self._render(context)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 163, in _render
-    return self.nodelist.render(context)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 936, in render
-    bit = node.render_annotated(context)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
-    return self.render(context)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/loader_tags.py", line 53, in render
-    result = self.nodelist.render(context)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 936, in render
-    bit = node.render_annotated(context)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/base.py", line 903, in render_annotated
-    return self.render(context)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/template/defaulttags.py", line 443, in render
-    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/urls/base.py", line 87, in reverse
-    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
-  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/django/urls/resolvers.py", line 677, in _reverse_with_prefix
-    raise NoReverseMatch(msg)
-django.urls.exceptions.NoReverseMatch: Reverse for 'register/' not found. 'register/' is not a valid view function or pattern name.
-2020-04-01 09:01:34,429 django.server ERROR    "GET /accounts/login/ HTTP/1.1" 500 142388
-2020-04-01 09:02:13,442 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 4019
-2020-04-01 09:02:19,084 django.server INFO     "GET /register/ HTTP/1.1" 200 2476
-2020-04-01 09:03:32,491 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 4062
-2020-04-01 09:05:15,194 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 4104
-2020-04-01 09:06:43,874 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3407
-2020-04-01 09:07:55,244 django.server INFO     "GET /register/ HTTP/1.1" 200 2476
-2020-04-01 09:08:08,779 django.server INFO     "POST /register/ HTTP/1.1" 302 0
-2020-04-01 09:08:08,783 django.server INFO     "GET /accounts/login HTTP/1.1" 301 0
-2020-04-01 09:08:08,796 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3407
-2020-04-01 09:08:14,116 django.server INFO     "POST /accounts/login/ HTTP/1.1" 302 0
-2020-04-01 09:08:14,121 django.request WARNING  Not Found: /
-2020-04-01 09:08:14,121 django.server WARNING  "GET / HTTP/1.1" 404 2252
-2020-04-01 09:21:24,600 django.server INFO     "GET /register/ HTTP/1.1" 200 4213
-2020-04-01 09:23:01,248 django.server INFO     "GET /register/ HTTP/1.1" 200 5984
-2020-04-01 09:23:41,697 django.server INFO     "GET /register/ HTTP/1.1" 200 6093
-2020-04-01 09:24:02,785 django.server INFO     "GET /register/ HTTP/1.1" 200 6118
-2020-04-01 09:24:03,941 django.server INFO     "GET /register/ HTTP/1.1" 200 6118
-2020-04-01 09:24:05,367 django.server INFO     "GET /register/ HTTP/1.1" 200 6118
-2020-04-01 09:24:11,759 django.server INFO     "GET /register/ HTTP/1.1" 200 6118
-2020-04-01 09:25:13,841 django.server INFO     "GET /register/ HTTP/1.1" 200 6210
-2020-04-01 09:26:53,679 django.server INFO     "GET /register/ HTTP/1.1" 200 3770
-2020-04-01 09:26:55,876 django.server INFO     "GET /register/ HTTP/1.1" 200 3770
-2020-04-01 09:27:32,937 django.server INFO     "POST /register/ HTTP/1.1" 200 3918
-2020-04-01 09:27:38,573 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3407
-2020-04-01 09:27:43,296 django.server INFO     "POST /accounts/login/ HTTP/1.1" 302 0
-2020-04-01 09:27:43,302 django.request WARNING  Not Found: /
-2020-04-01 09:27:43,303 django.server WARNING  "GET / HTTP/1.1" 404 2252
-2020-04-01 09:34:06,779 django.utils.autoreload INFO     Watching for file changes with StatReloader
-2020-04-01 09:34:13,872 django.request WARNING  Not Found: /
-2020-04-01 09:34:13,872 django.server WARNING  "GET / HTTP/1.1" 404 2252
-2020-04-01 09:34:17,358 django.request WARNING  Not Found: /
-2020-04-01 09:34:17,358 django.server WARNING  "GET / HTTP/1.1" 404 2252
-2020-04-01 09:34:18,984 django.server INFO     "GET /register/ HTTP/1.1" 200 3770
-2020-04-01 09:34:19,846 django.server INFO     "GET /register/ HTTP/1.1" 200 3770
-2020-04-01 09:36:16,771 django.utils.autoreload INFO     /Users/alinpop/PycharmProjects/ContentRate/registration/forms.py changed, reloading.
-2020-04-01 09:36:17,193 django.utils.autoreload INFO     Watching for file changes with StatReloader
-2020-04-01 09:36:21,750 django.server INFO     "GET /register/ HTTP/1.1" 200 3793
-2020-04-01 09:36:55,427 django.utils.autoreload INFO     /Users/alinpop/PycharmProjects/ContentRate/registration/forms.py changed, reloading.
-2020-04-01 09:36:55,852 django.utils.autoreload INFO     Watching for file changes with StatReloader
-2020-04-01 09:36:59,687 django.server INFO     "GET /register/ HTTP/1.1" 200 3867
-2020-04-01 09:37:47,965 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3407
-2020-04-01 09:37:49,772 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3407
-2020-04-01 09:39:42,604 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3407
-2020-04-01 09:39:44,886 django.server INFO     "GET /register/ HTTP/1.1" 200 3867
-2020-04-01 09:39:46,849 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3407
-2020-04-01 09:39:48,383 django.server INFO     "GET /register/ HTTP/1.1" 200 3867
-2020-04-01 09:39:49,603 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3407
-2020-04-01 09:43:11,120 django.server INFO     "GET /register/ HTTP/1.1" 200 3866
-2020-04-01 09:43:23,584 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3406
-2020-04-01 09:43:25,853 django.server INFO     "GET /register/ HTTP/1.1" 200 3866
-2020-04-01 09:43:27,099 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3406
-2020-04-01 09:43:28,319 django.server INFO     "GET /register/ HTTP/1.1" 200 3866
-2020-04-01 09:43:39,912 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3406
-2020-04-01 09:47:29,917 django.utils.autoreload INFO     /Users/alinpop/PycharmProjects/ContentRate/registration/views.py changed, reloading.
-2020-04-01 09:47:30,492 django.utils.autoreload INFO     Watching for file changes with StatReloader
-2020-04-01 09:48:05,606 django.utils.autoreload INFO     /Users/alinpop/PycharmProjects/ContentRate/registration/views.py changed, reloading.
-2020-04-01 09:48:06,043 django.utils.autoreload INFO     Watching for file changes with StatReloader
-2020-04-01 09:48:10,532 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3406
-2020-04-01 09:48:11,263 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3406
-2020-04-01 09:48:11,680 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3406
-2020-04-01 09:48:19,259 django.utils.autoreload INFO     /Users/alinpop/PycharmProjects/ContentRate/registration/views.py changed, reloading.
-2020-04-01 09:48:19,637 django.utils.autoreload INFO     Watching for file changes with StatReloader
-2020-04-01 09:48:23,267 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 3406
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\core\handlers\base.py", line 113, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Dan\PycharmProjects\content_rate\registration\views.py", line 54, in user_register
+    return render(request, template, {'form': form})
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Dan\PycharmProjects\content_rate\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: registration/registration.html
+2020-04-01 10:28:32,348 django.server ERROR    "GET /register/ HTTP/1.1" 500 88135
+2020-04-01 10:33:15,369 django.server INFO     "GET /register/ HTTP/1.1" 200 2476
+2020-04-01 10:34:58,961 django.server INFO     "POST /register/ HTTP/1.1" 302 0
+2020-04-01 10:34:58,978 django.server INFO     "GET /accounts/login HTTP/1.1" 301 0
+2020-04-01 10:34:59,009 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 814
+2020-04-01 10:35:04,440 django.server INFO     "POST /accounts/login/ HTTP/1.1" 302 0
+2020-04-01 10:35:04,465 django.request WARNING  Not Found: /
+2020-04-01 10:35:04,466 django.server WARNING  "GET / HTTP/1.1" 404 2252
+2020-04-01 10:35:12,624 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 814
+2020-04-01 10:53:37,289 django.utils.autoreload INFO     C:\Users\Dan\PycharmProjects\content_rate\content_rate\urls.py changed, reloading.
+2020-04-01 10:53:40,350 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2020-04-01 10:53:42,430 django.request WARNING  Not Found: /
+2020-04-01 10:53:42,431 django.server WARNING  "GET / HTTP/1.1" 404 2261
+2020-04-01 10:53:51,986 django.server INFO     "GET /accounts/register HTTP/1.1" 301 0
+2020-04-01 10:53:52,030 django.server INFO     "GET /accounts/register/ HTTP/1.1" 200 2485
+2020-04-01 11:17:35,411 django.server INFO     "GET /accounts/login/ HTTP/1.1" 200 751
+2020-04-01 11:17:41,787 django.server INFO     "POST /accounts/login/ HTTP/1.1" 200 840
