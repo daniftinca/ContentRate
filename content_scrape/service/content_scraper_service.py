@@ -1,10 +1,10 @@
 from bs4 import BeautifulSoup
-from pip._vendor import requests
+import pip._vendor
 
 from content_scrape.model.content import Content
 
-class ContentScraperService:
 
+class ContentScraperService:
     BLACKLIST = [
         '[document]',
         'noscript',
@@ -17,12 +17,13 @@ class ContentScraperService:
         'style',
         'footer',
         'aside',
-        'title'
+        'title',
+        'alt'
     ]
 
     @staticmethod
     def scrape_page(url):
-        page = requests.get(url)
+        page = pip._vendor.requests.get(url)
         page_content = page.content
         return BeautifulSoup(page_content, 'html.parser')
 
