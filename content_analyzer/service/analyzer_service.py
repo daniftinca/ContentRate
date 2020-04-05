@@ -4,6 +4,7 @@ import pandas as pd
 import sklearn as sk
 import math
 from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction import text
 
 class AnalyzerService:
     url = ''
@@ -31,7 +32,7 @@ class AnalyzerService:
         return request_length,target_length
 
 
-    def compare_tfidf_new(self):
+    def get_tf_idf_results(self):
         tfidf_vectorizer = TfidfVectorizer(use_idf=True)
 
         first = self.scraping_service.get_page_content(self.url)
@@ -43,6 +44,7 @@ class AnalyzerService:
             df = pd.DataFrame(first_vector_tfidfvectorizer.T.todense(), index=tfidf_vectorizer.get_feature_names(),
                               columns=["tfidf"])
             df.sort_values(by=["tfidf"], ascending=False)
+            df.to_csv()
             results.append(df)
 
         return results
