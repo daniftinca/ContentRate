@@ -1,10 +1,10 @@
 import re
 
 from bs4 import BeautifulSoup
+import requests
 import urllib
 import http.client
 
-from pip._vendor import requests
 
 from content_scrape.service.content_scraper_service import ContentScraperService
 

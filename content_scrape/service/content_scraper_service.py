@@ -1,8 +1,9 @@
 from bs4 import BeautifulSoup
+import requests
 import urllib.request
 import http.client
 
-from pip._vendor import requests
+
 
 from content_scrape.model.content import Content
 
