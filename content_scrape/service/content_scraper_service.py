@@ -1,5 +1,8 @@
 from bs4 import BeautifulSoup
-import pip._vendor
+import urllib.request
+import http.client
+
+from pip._vendor import requests
 
 from content_scrape.model.content import Content
 
@@ -23,9 +26,11 @@ class ContentScraperService:
 
     @staticmethod
     def scrape_page(url):
-        page = pip._vendor.requests.get(url)
-        page_content = page.content
-        return BeautifulSoup(page_content, 'html.parser')
+        user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
+        headers = {'User-Agent': user_agent}
+        request = requests.get(url, headers)
+        response = request.content
+        return BeautifulSoup(response, 'html.parser')
 
     def get_page_content(self, url):
         soup = self.scrape_page(url)
