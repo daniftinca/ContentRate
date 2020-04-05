@@ -102,7 +102,6 @@ def get_request_tf_idf_result(self):
 
     print("Mean: \n")
     mean_res = df.mask(df.eq(0)).mean()
-    # mean_res = mean_res.sort_values(ascending=False)
     print(mean_res)
     print(type(mean_res))
 
