@@ -24,11 +24,15 @@ class GoogleSearchScraperService:
 
     @staticmethod
     def scrape_page(url):
-        user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
-        headers = {'User-Agent': user_agent}
-        request = requests.get(url, headers)
-        response = request.content
-        return BeautifulSoup(response, 'html.parser')
+        try:
+            user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
+            headers = {'User-Agent': user_agent}
+            request = requests.get(url, headers)
+            response = request.content
+            return BeautifulSoup(response, 'html.parser')
+        except:
+            print("Couldn't get content for: " + url)
+            return "error"
 
     @staticmethod
     def construct_url(query):
@@ -36,14 +40,16 @@ class GoogleSearchScraperService:
 
     def get_search_result(self, query):
         soup = self.scrape_page(self.construct_url(query))
-
+        if soup == 'error':
+            return None
         links = []
 
         for item in soup.findAll("div", {"class": "ZINbbc xpd O9g5cc uUPGi"}):
             anchors = item.find_all('a')
-            link = anchors[0].get('href')[7:]
-            if re.match(self.REGEX, link):
-                links.append(link.split('&')[0])
+            if len(anchors) > 0:
+                link = anchors[0].get('href')[7:]
+                if re.match(self.REGEX, link):
+                    links.append(link.split('&')[0])
 
         return links
 

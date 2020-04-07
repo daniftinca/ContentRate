@@ -40,78 +40,78 @@ class AnalyzerService:
             print("Cannot do analysis")
 
 
-def compare_len(self):
-    sum = 0
-    for content in self.google_content:
-        content = content.text_content
-        sum += len(content.split(" "))
+    def compare_len(self):
+        sum = 0
+        for content in self.google_content:
+            content = content.text_content
+            sum += len(content.split(" "))
 
-    target_length = sum / len(self.google_content)
-    request_length = len(self.request_page_content.split(" "))
+        target_length = sum / len(self.google_content)
+        request_length = len(self.request_page_content.split(" "))
 
-    return request_length, target_length
-
-
-def pre_process(self, text_string):
-    # lowercase
-    text_string = text_string.lower()
-
-    # remove tags
-    text_string = re.sub("<!--?.*?-->", "", text_string)
-
-    # remove special characters and digits
-    text_string = re.sub("(\\d|\\W)+", " ", text_string)
-
-    return text_string
+        return request_length, target_length
 
 
-def get_tfidf_google(self):
-    if self.unable:
-        return None
+    def pre_process(self, text_string):
+        # lowercase
+        text_string = text_string.lower()
 
-    dense = self.google_vectors.todense()
-    # get mean tfidf
+        # remove tags
+        text_string = re.sub("<!--?.*?-->", "", text_string)
 
-    denselist = dense.tolist()
+        # remove special characters and digits
+        text_string = re.sub("(\\d|\\W)+", " ", text_string)
 
-    df = pd.DataFrame(denselist, columns=self.feature_names_google)
-    print(df.head())
-    print("Mean: \n")
-    mean_res = df.mask(df.eq(0)).mean()
-    mean_res = mean_res.sort_values(ascending=False)
-    print(mean_res)
-    print(type(mean_res))
-
-    df = mean_res.to_frame()
-    df = df.head(50)
-    # df = df.nlargest(50,[1])
-    df.to_csv("result.csv")
-
-    tfidf_score = df.values.tolist()
-    tfidf_terms = df.index.values.tolist()
-
-    return tfidf_score, tfidf_terms
+        return text_string
 
 
-def get_request_tf_idf_result(self):
-    googletf, googleterms = self.get_tfidf_google()
-    tfidf = self.tfidf_vectorizer.transform([self.request_page_content])
-    dense = tfidf.todense().tolist()
+    def get_tfidf_google(self):
+        if self.unable:
+            return None
 
-    df = pd.DataFrame(dense, columns=self.feature_names_google)
+        dense = self.google_vectors.todense()
+        # get mean tfidf
 
-    print("Mean: \n")
-    mean_res = df.mask(df.eq(0)).mean()
-    print(mean_res)
-    print(type(mean_res))
+        denselist = dense.tolist()
 
-    df = mean_res.to_frame()
-    df = df.loc[googleterms, :]
-    print(df.head(50))
-    # df = df.nlargest(50,[1])
-    df.to_csv("result-request.csv")
+        df = pd.DataFrame(denselist, columns=self.feature_names_google)
+        print(df.head())
+        print("Mean: \n")
+        mean_res = df.mask(df.eq(0)).mean()
+        mean_res = mean_res.sort_values(ascending=False)
+        print(mean_res)
+        print(type(mean_res))
 
-    tfidf_score = df.values.tolist()
-    tfidf_terms = df.index.values.tolist()
+        df = mean_res.to_frame()
+        df = df.head(50)
+        # df = df.nlargest(50,[1])
+        df.to_csv("result.csv")
 
-    return tfidf_score, tfidf_terms
+        tfidf_score = df.values.tolist()
+        tfidf_terms = df.index.values.tolist()
+
+        return tfidf_score, tfidf_terms
+
+
+    def get_request_tf_idf_result(self):
+        googletf, googleterms = self.get_tfidf_google()
+        tfidf = self.tfidf_vectorizer.transform([self.request_page_content])
+        dense = tfidf.todense().tolist()
+
+        df = pd.DataFrame(dense, columns=self.feature_names_google)
+
+        print("Mean: \n")
+        mean_res = df.mask(df.eq(0)).mean()
+        print(mean_res)
+        print(type(mean_res))
+
+        df = mean_res.to_frame()
+        df = df.loc[googleterms, :]
+        print(df.head(50))
+        # df = df.nlargest(50,[1])
+        df.to_csv("result-request.csv")
+
+        tfidf_score = df.values.tolist()
+        tfidf_terms = df.index.values.tolist()
+
+        return tfidf_score, tfidf_terms, googletf, googleterms

@@ -6,6 +6,17 @@ html {
     background: #7abecc !important;
 }
 
+.page-content{
+    padding: 50px;
+}
+#chartContainer{
+    height: 1000px!important;
+}
+
+.len-results{
+    font-size: 18px;
+    color: white;
+}
 .user_card {
     width: 350px;
     margin-top: auto;

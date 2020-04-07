@@ -27,15 +27,20 @@ class ContentScraperService:
 
     @staticmethod
     def scrape_page(url):
-        user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
-        headers = {'User-Agent': user_agent}
-        request = requests.get(url, headers)
-        response = request.content
-        return BeautifulSoup(response, 'html.parser')
+        try:
+            user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
+            headers = {'User-Agent': user_agent}
+            request = requests.get(url, headers)
+            response = request.content
+            return BeautifulSoup(response, 'html.parser')
+        except:
+            print("An error occured with " + url)
+            return 'error'
 
     def get_page_content(self, url):
         soup = self.scrape_page(url)
-
+        if soup == 'error':
+            return None
         page_title = soup.title.string
         content = soup.find_all(text=True)
 
