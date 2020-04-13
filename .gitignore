@@ -1,3 +1,17 @@
 /.idea/
 __pycache__/
 /log/
+result.csv
+result-request.csv
+content_analyzer/main.py
+content_scrape/main.py
+registration/serializer.py
+user_profile/tests.py
+user_profile/models.py
+user_profile/apps.py
+user_profile/admin.py
+user_profile/__init__.py
+registration/migrations/0001_initial.py
+user_profile/views.py
+user_profile/migrations/__init__.py
+user_profile/migrations/0001_initial.py

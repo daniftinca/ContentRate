@@ -18,13 +18,13 @@
     <h1>Content Analyzer</h1>
     <nav>
         <ul>
-            {% if request.user.is_authenticated %}
-                <li><a href="/"> Home</a></li>
-                <li><a href="/accounts/logout">Logout</a></li>
-            {% else %}
+{#            {% if request.user.is_authenticated %}#}
+{#                <li><a href="/"> Home</a></li>#}
+{#                <li><a href="/accounts/logout">Logout</a></li>#}
+{#            {% else %}#}
                 <li><a href="/accounts/login">Login</a></li>
                 <li><a href="/accounts/register">Register</a></li>
-            {% endif %}
+{#            {% endif %}#}
 
         </ul>
     </nav>
