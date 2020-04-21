@@ -13,8 +13,6 @@ import logging.config
 from django.utils.log import DEFAULT_LOGGING
 
 
-# Activate Django-Heroku.
-django_heroku.settings(locals())
 
 # Disable Django's logging setup
 LOGGING_CONFIG = None
@@ -165,10 +163,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_TMP = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
 
 
 LOGIN_REDIRECT_URL = '/'
+
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
