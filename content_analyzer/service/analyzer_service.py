@@ -1,8 +1,8 @@
 from content_scrape.service.content_scraper_service import ContentScraperService
 from content_scrape.service.google_search_scraper_service import GoogleSearchScraperService
 import pandas as pd
-import sklearn as sk
-import math
+
+
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction import text
 import re
