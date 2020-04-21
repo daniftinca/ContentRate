@@ -9,46 +9,46 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import django_heroku
-import logging.config
-from django.utils.log import DEFAULT_LOGGING
+# import logging.config
+# from django.utils.log import DEFAULT_LOGGING
 
 
 
 # Disable Django's logging setup
-LOGGING_CONFIG = None
-
-LOGLEVEL = os.environ.get('LOGLEVEL', 'info').upper()
-
-logging.config.dictConfig({
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'console': {
-            'format': '%(name)-12s %(levelname)-8s %(message)s'
-        },
-        'file': {
-            'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s'
-        }
-    },
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-            'formatter': 'console'
-        },
-        'file': {
-            'level': 'INFO',
-            'class': 'logging.FileHandler',
-            'formatter': 'file',
-            'filename': os.path.join(os.path.abspath(os.path.dirname(__name__)), 'log/django.log')
-        }
-    },
-    'loggers': {
-        '': {
-            'level': 'INFO',
-            'handlers': ['console', 'file']
-        }
-    }
-})
+# LOGGING_CONFIG = None
+#
+# LOGLEVEL = os.environ.get('LOGLEVEL', 'info').upper()
+#
+# logging.config.dictConfig({
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'formatters': {
+#         'console': {
+#             'format': '%(name)-12s %(levelname)-8s %(message)s'
+#         },
+#         'file': {
+#             'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s'
+#         }
+#     },
+#     'handlers': {
+#         'console': {
+#             'class': 'logging.StreamHandler',
+#             'formatter': 'console'
+#         },
+#         'file': {
+#             'level': 'INFO',
+#             'class': 'logging.FileHandler',
+#             'formatter': 'file',
+#             'filename': os.path.join(os.path.abspath(os.path.dirname(__name__)), 'log/django.log')
+#         }
+#     },
+#     'loggers': {
+#         '': {
+#             'level': 'INFO',
+#             'handlers': ['console', 'file']
+#         }
+#     }
+# })
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
