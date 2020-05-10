@@ -5,7 +5,6 @@ import requests
 import urllib
 import http.client
 
-
 from content_scrape.service.content_scraper_service import ContentScraperService
 
 
@@ -46,7 +45,7 @@ class GoogleSearchScraperService:
 
         for item in soup.findAll("div", {"class": "ZINbbc xpd O9g5cc uUPGi"}):
             anchors = item.find_all('a')
-            if len(anchors) > 0:
+            if anchors:
                 link = anchors[0].get('href')[7:]
                 if re.match(self.REGEX, link):
                     links.append(link.split('&')[0])
@@ -59,6 +58,6 @@ class GoogleSearchScraperService:
         list_content = []
 
         for link in found_links:
-            list_content.append(self.content_scraper_service.get_page_content(link))
-
+            if "youtube" not in link:
+                list_content.append(self.content_scraper_service.get_page_content(link))
         return list_content
